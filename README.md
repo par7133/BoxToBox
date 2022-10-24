@@ -1,5 +1,5 @@
 # BoxToBox
-Your boxed development console
+Your clientside boxed development console
 
 ### Screenshots:
 
