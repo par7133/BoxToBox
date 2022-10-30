@@ -3,29 +3,31 @@
  * Copyright (c) 2016, 2024, 5 Mode
  * All rights reserved.
  * 
- * This file is part of Box Me.
+ * This file is part of BoxToBox.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
+ * and associated documentation files (the "Software"), to deal in the Software 
+ * without restriction, including without limitation the rights to use, copy, modify, merge, publish, 
+ * distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the 
+ * Software is furnished to do so, subject to the following conditions:
  * 
- * Box Me is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
+ * The above copyright notice and this permission notice shall be included in all copies or 
+ * substantial portions of the Software.
  * 
- * Box Me is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.  
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+ * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
+ * AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
- * You should have received a copy of the GNU General Public License
- * along with Box Me. If not, see <https://www.gnu.org/licenses/>.
- * config.inc
- * 
- * Box Me common javascript code.
+ * BoxToBox common javascript code.
  *
  * @author Daniele Bonini <my25mb@aol.com>
  * @copyrights (c) 2021, 2024, 5 Mode 
  */
 
-function BOXMEcloseMe(tthis) {
+function BOXTOBOXcloseMe(tthis) {
   $(tthis).parent().hide();
 }
 
@@ -35,7 +37,7 @@ function BOXMEcloseMe(tthis) {
  * @param {string} string - The string to encrypt
  * @returns {string} the encrypted string
  */
-function BOXMEencryptSha2(string) {
+function BOXTOBOXencryptSha2(string) {
   var jsSHAo = new jsSHA("SHA-256", "TEXT", 1);
   jsSHAo.update(string);
   return jsSHAo.getHash("HEX");
@@ -47,7 +49,7 @@ function BOXMEencryptSha2(string) {
  * @param {none} 
  * @returns {int} the document height
  */
-function BOXMEgetDocHeight() {
+function BOXTOBOXgetDocHeight() {
   var D = document;
   return Math.max(
       D.body.scrollHeight, D.documentElement.scrollHeight,
@@ -56,7 +58,7 @@ function BOXMEgetDocHeight() {
   );
 }
 
-function BOXMEgetDocHeight2() {
+function BOXTOBOXgetDocHeight2() {
   var D = document;
   var scrollMaxY;
   if (window.scrollMaxY) {
@@ -79,7 +81,7 @@ function BOXMEgetDocHeight2() {
  * @param {none} 
  * @returns {int} the document width
  */
-function BOXMEgetDocWidth() {
+function BOXTOBOXgetDocWidth() {
   var D = document;
   return Math.max(
       D.body.scrollWidth, D.documentElement.scrollWidth,
@@ -88,7 +90,7 @@ function BOXMEgetDocWidth() {
   );
 }
 
-function BOXMEgetDocWidth2() {
+function BOXTOBOXgetDocWidth2() {
   var D = document;
   var scrollMaxX;
   if (window.scrollMaxX) {
@@ -103,7 +105,7 @@ function BOXMEgetDocWidth2() {
   );
 }
 
-function BOXMErnd(min, max) {
+function BOXTOBOXrnd(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min +1)) + min;
@@ -116,6 +118,6 @@ function BOXMErnd(min, max) {
   * @param {string} target the frame target
   * @returns {none}
   */
-function BOXMEopenLink(href, target) {
+function BOXTOBOXopenLink(href, target) {
   window.open(href, target);
 }
