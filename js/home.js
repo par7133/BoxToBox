@@ -28,7 +28,7 @@
  * @license https://opensource.org/licenses/BSD-3-Clause 
  */
  
- function BOXMEstartApp() {
+ function BOXTOBOXstartApp() {
 
  }			
 
@@ -37,17 +37,17 @@
   * 
   * @returns void
   */
- function _BOXMEstartApp() {
+ function _BOXTOBOXstartApp() {
    
-   setTimeout("BOXMEstartApp()", 1000);    
+   setTimeout("BOXTOBOXstartApp()", 1000);    
  }
  
-function BOXMEreload() {
+function BOXTOBOXreload() {
   //window.location.reload(); 
   document.getElementById("frmUpload").submit();
 }
 
-function BOXMEsetContentPos() {                    
+function BOXTOBOXsetContentPos() {                    
   h=parseInt(window.innerHeight);
   w=parseInt(window.innerWidth);
 
@@ -67,7 +67,7 @@ function BOXMEsetContentPos() {
   }  
 } 
 
-function BOXMEsetFooterPos() {
+function BOXTOBOXsetFooterPos() {
   if (document.getElementById("footerCont")) {
     tollerance = 16;
     $("#footerCont").css("top", parseInt( window.innerHeight - $("#footerCont").height() - tollerance ) + "px");
@@ -77,17 +77,17 @@ function BOXMEsetFooterPos() {
 
 window.addEventListener("load", function() {
 
-  setTimeout("BOXMEsetContentPos()", 500);
-  setTimeout("BOXMEsetFooterPos()", 1000);
+  setTimeout("BOXTOBOXsetContentPos()", 500);
+  setTimeout("BOXTOBOXsetFooterPos()", 1000);
 
-  setTimeout("_BOXMEstartApp()", 10000);
+  setTimeout("_BOXTOBOXstartApp()", 10000);
 
 }, true);
 
 window.addEventListener("resize", function() {
 
-  setTimeout("BOXMEsetContentPos()", 500);
-  setTimeout("BOXMEsetFooterPos()", 1000);
+  setTimeout("BOXTOBOXsetContentPos()", 500);
+  setTimeout("BOXTOBOXsetFooterPos()", 1000);
 
 }, true);
   
