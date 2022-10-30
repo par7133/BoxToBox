@@ -52,13 +52,13 @@ https://opensource.org/licenses/MIT
 <form id="frmUpload" role="form" method="post" action="/" target="_self" enctype="multipart/form-data">  
 
 <div id="resizeBanner">
-    BoxMe is bigger!
+    BoxToBox is bigger!
 </div>  
 
 <div id="content">
   
     <div id="header">
-      <img src="/res/logo2.png" style="width:38px;position:relative;top:-5px;">&nbsp;BoxToBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="BOXMErun();"><img src="/res/run.png" style="width:21px;position:relative;top:-5px;">&nbsp;Go!</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="BOXMEclearAll()"><img src="/res/clear.png" style="width:21px;position:relative;top:-5px;">&nbsp;Clear</a>&nbsp;&nbsp;&nbsp;
+      <img src="/res/logo2.png" style="width:38px;position:relative;top:-5px;">&nbsp;BoxToBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="BOXTOBOXrun();"><img src="/res/run.png" style="width:21px;position:relative;top:-5px;">&nbsp;Go!</a>&nbsp;&nbsp;&nbsp;<a href="#" onclick="BOXTOBOXclearAll()"><img src="/res/clear.png" style="width:21px;position:relative;top:-5px;">&nbsp;Clear</a>&nbsp;&nbsp;&nbsp;
     </div>  
 
     <div id="coding"> 
@@ -95,25 +95,25 @@ https://opensource.org/licenses/MIT
 </form>       
 
 <script>  
-  function BOXMErun() {
+  function BOXTOBOXrun() {
     CSSCode = "<style>"+document.getElementById("txtCSSCode").value+"</style>";
     JSCode = "<script>"+document.getElementById("txtJSCode").value+"\<\/script\>";
-    if (JSCode.indexOf("BOXME")>0) {
-      alert("You can't use <BOXME> code inside your own script!");
+    if (JSCode.indexOf("BOXTOBOX")>0) {
+      alert("You can't use <BOXTOBOX> code inside your own script!");
       return;
     }  
     HTMLCode = document.getElementById("txtHTMLCode").value;
     $("#finalResult").html(CSSCode+"\n"+JSCode+"\n"+HTMLCode+"\n");
   }
 
-  function BOXMEclearAll() {
+  function BOXTOBOXclearAll() {
     $("#txtHTMLCode").val("");
     $("#txtCSSCode").val("");
     $("#txtJSCode").val("");
     $("#finalResult").html("");
   }
 
-  function BOXMEshowNudity() {
+  function BOXTOBOXshowNudity() {
     document.getElementById("finalResult").innerHTML = $("#finalResult").html();
   }  
 </script>
