@@ -1,0 +1,64 @@
+<style>
+.bbb {
+  color: #7bca2e;
+  text-decoration: underline;
+}
+#originsDisplay {
+  float:left;
+  position:fixed;
+  top:680px;
+  left:50px;
+  width:275px;
+  height:120px;
+  font-family: Monospace, Verdana, Serif;
+  font-size: 14px;
+  background-color: #020401;
+  border: 3px solid lightgray;
+  text-align:left;
+  color: #FFFFFF;
+  white-space:nowrap;
+  font-weight:900;
+  padding:10px;
+  padding-top:4px;
+  z-index:99999;
+  display:none;
+}
+.originLabel {
+  color: #7bca2e;
+  font-weight:900;
+}
+</style>
+
+<div id="originsDisplay">
+      <br>
+       &nbsp;<span class="originLabel">Coding:</span>&nbsp;Italy</span><br>
+       &nbsp;<span class="originLabel">Server:</span>&nbsp;United States&nbsp;<br>
+       &nbsp;<span class="originLabel"><a href="http://metrica.yandex.com" class="bbb">Metrics</a>:</span>&nbsp;Russia&nbsp;<br>
+      <br>
+</div>
+
+<script>
+function setOriginsPos() {
+  h=parseInt(window.innerHeight);
+  w=parseInt(window.innerWidth);
+  mytop = parseInt(window.innerHeight - ($("#originsDisplay").height() + 60));
+  $("#originsDisplay").css("top", mytop+"px");
+  setTimeout("hideOrigins()",15000);
+}
+
+function hideOrigins() {
+  $("#originsDisplay").css("visibility","hidden");
+}  
+
+function showOrigins() {
+  $("#originsDisplay").show();
+}  
+
+window.addEventListener("load", function() {
+
+  setTimeout("setOriginsPos()", 500);
+  setTimeout("showOrigins()", 500);
+
+});
+
+</script>
