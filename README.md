@@ -5,4 +5,4 @@ Your clientside boxed development console
 
 ![BoxToBox in action #1](/res/screenshot1.jpg)<br>
 
-Feedback: posta@elettronica.lol
+Feedback: <a href="mailto:code@gaox.io">code@gaox.io</a>
